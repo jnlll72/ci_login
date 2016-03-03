@@ -1,12 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class UserModel extends CI_Model{
+class AdminModel extends CI_Model{
 
     //fonction de test select, !! plus qu'à faire avec la base de données
-    public function select($login,$pass){
-        $query = $this->db->get_where('users',array('login'=>$login,'password'=>$pass));
-        if($query->num_rows() == 1){
-            return array(TRUE,$query->result_array());
+    public function insert($login,$email,$pass){
+        $data = array("login"=>$login,"email"=>$email,"password"=>$pass);
+        $query = $this->db->insert('users',$data);
+        if($query){
+            return TRUE;
         }else{
             return FALSE;
         }

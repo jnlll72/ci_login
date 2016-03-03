@@ -51,9 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['form'] = 'LoginController';
-$route['admin'] = 'AdminController';
+$route['signup'] = 'SignUpController';
+$route['user'] = 'AdminController';
 $route['boby'] = 'MonController';
 $route['test'] = 'welcome';
+$route['allusers'] = 'adminController/adminView';
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
