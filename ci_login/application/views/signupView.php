@@ -39,7 +39,7 @@
         </div>
         
         <div class="form-group">
-            <label class="col-md-4 control-label" for="txt_login">Email : </label>  
+            <label class="col-md-4 control-label" for="txt_email">Email : </label>  
             <div class="col-md-4">
                 <input id="txt_email" name="txt_email" type="email" class="form-control input-md"/>
             </div>
@@ -51,6 +51,13 @@
             <div class="col-md-4">
                 <input id="txt_pass" name="txt_pass" type="password" class="form-control input-md"/>
             </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txt_confirm_pass">Confirm Password :</label>
+            <div class="col-md-4">
+                <input id="txt_confirm_pass" name="txt_confirm_pass" type="password" class="form-control input-md"/>
+            </div><div id="ok_pass_glyph"><i class="fa fa-check-circle-o fa-2x"></i></div><div id="ko_pass_glyph"><i class="fa fa-times-circle-o fa-2x"></i></div>
         </div>
 
         <!-- Button -->

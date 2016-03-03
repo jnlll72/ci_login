@@ -11,6 +11,7 @@ class InsertController extends CI_Controller {
     public function index(){
         $this->form_validation->set_rules('txt_login', 'Login', 'callback_check_login');
         $this->form_validation->set_rules('txt_pass', 'Password', 'callback_check_pass');
+        $this->form_validation->set_rules('txt_confirm_pass', 'Password', 'matches[txt_pass]|callback_check_pass');
         $this->form_validation->set_rules('txt_email','Email','valid_email|callback_check_email');
 
         if($this->form_validation->run() == FALSE){

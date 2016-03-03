@@ -29,14 +29,20 @@ if(empty($login) || empty($email)){
             <li class='dropdown'>
                 <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;&nbsp;<?php echo $login; ?><b class='caret'></b></a>
                 <ul class='dropdown-menu'>
-                    <li><a href='#'><i class='fa fa-user'></i>&nbsp;&nbsp;&nbsp;Profil</a></li>
+                    <li><a href='<?php echo base_url()."user"; ?>'><i class='fa fa-user'></i>&nbsp;&nbsp;&nbsp;Profil</a></li>
                     <li><a href='<?php echo base_url()."allusers";?>'><i class='fa fa-users'></i>&nbsp;&nbsp;&nbsp;See all users</a></li>
                 </ul>
             </li>
             <?php
-            }else{
-                echo"<li><a href='#'><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;&nbsp;".$login."</a></li>";
-            }
+            }else{?>
+            <li class='dropdown'>
+                <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span>&nbsp;&nbsp;&nbsp;<?php echo $login; ?><b class='caret'></b></a>
+                <ul class='dropdown-menu'>
+                    <li><a href='<?php echo base_url()."user"; ?>'><i class='fa fa-user'></i>&nbsp;&nbsp;&nbsp;Profil</a></li>
+                </ul>
+            </li>
+            <?php
+                 }
             ?>
 
             <li><a href="<?php echo base_url().'adminController/logOut'; ?>"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;log out</a></li>
